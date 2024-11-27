@@ -53,6 +53,10 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script_stop: true
           script: |
+            echo "MY_DATA_SOURCE=${{ secrets.MY_DATA_SOURCE }}"
+            echo "MY_DATA_USERNAME=${{ secrets.MY_DATA_USERNAME }}"
+            echo "MY_DATA_PASSWORD=${{ secrets.MY_DATA_PASSWORD }}"
+            echo "DOCKER_USER=${{ secrets.DOCKER_USER }}"
             # dockerhub 에 토큰을 가지고 로그인
             echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
             # docker 이미지 풀
@@ -66,6 +70,7 @@ jobs:
             -e MY_DATA_USERNAME=${{ secrets.MY_DATA_USERNAME }} \
             -e MY_DATA_PASSWORD=${{ secrets.MY_DATA_PASSWORD }} \
             ${{ secrets.DOCKER_USER }}/web-app:latest
+            
             
             
 
