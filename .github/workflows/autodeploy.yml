@@ -9,9 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      MY_DATA_SOURCE: ${{ secrets.DATA_SOURCE }}
-      MY_DATA_USERNAME: ${{ secrets.DATA_USER }}
-      MY_DATA_PASSWORD: ${{ secrets.DATA_PWD }}
+      MY_DATA_SOURCE: ${{ secrets.MY_DATA_SOURCE }}
+      MY_DATA_USERNAME: ${{ secrets.MY_DATA_USERNAME }}
+      MY_DATA_PASSWORD: ${{ secrets.MY_DATA_PASSWORD }}
 
     steps: # 저장소에서 코드 가져오기
       - name: source code checkout
