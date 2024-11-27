@@ -3,7 +3,8 @@ spring:
     name: cicdtest3
 
   datasource:
-    url: ${MY_DATA_SOURCE}  # MySQL ?? URL? ????? ??
+    url: jdbc:mysql://43.203.209.85:3306/mydb?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+#    url: ${MY_DATA_SOURCE}  # MySQL ?? URL? ????? ??
 #    username: ${MY_DATA_USERNAME}  # ????
 #    password: ${MY_DATA_PASSWORD}  # ????
     username: root
