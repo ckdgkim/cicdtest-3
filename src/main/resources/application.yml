@@ -4,8 +4,10 @@ spring:
 
   datasource:
     url: ${MY_DATA_SOURCE}  # MySQL ?? URL? ????? ??
-    username: ${MY_DATA_USERNAME}  # ????
-    password: ${MY_DATA_PASSWORD}  # ????
+#    username: ${MY_DATA_USERNAME}  # ????
+#    password: ${MY_DATA_PASSWORD}  # ????
+    username: root
+    password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver  # MySQL ???? ??
 
 
