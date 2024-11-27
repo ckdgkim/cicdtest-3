@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: cicdtest3
+
+  datasource:
+    url: ${MY_DATA_SOURCE}  # MySQL ?? URL? ????? ??
+    username: ${MY_DATA_USERNAME}  # ????
+    password: ${MY_DATA_PASSWORD}  # ????
+    driver-class-name: com.mysql.cj.jdbc.Driver  # MySQL ???? ??
+
+
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        hbm2ddl:
+          auto: update
+
+logging:
+  level:
+    org.springframework.jdbc.datasource: DEBUG
+    org.springframework.boot.jdbc: DEBUG
+
+
